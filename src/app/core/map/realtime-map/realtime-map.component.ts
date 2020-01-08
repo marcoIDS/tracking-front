@@ -147,6 +147,9 @@ export class RealtimeMapComponent implements OnInit {
 
     map = new google.maps.Map(document.getElementById('map'), opts);
     map.setMapTypeId('roadmap');
+    const controls = document.getElementById('controls');
+    map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(controls);
+
     this.map = map;
     this.filtrarCar('all');
   }
