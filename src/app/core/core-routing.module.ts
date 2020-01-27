@@ -10,6 +10,9 @@ const routes: Routes = [
     // canActivate: [AuthGuard],
     children: [
       { path: '', loadChildren: './map/map.module#MapModule' },
+      { path: 'vehicles', loadChildren: './vehicles/vehicles.module#VehiclesModule' },
+      { path: 'users', loadChildren: './users/users.module#UsersModule' },
+      { path: 'business', loadChildren: './business/business.module#BusinessModule' },
     ]
   }
 ];
